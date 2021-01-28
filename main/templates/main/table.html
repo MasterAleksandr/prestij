@@ -1,0 +1,35 @@
+{% load static %}
+
+<html lang="ru"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    <title>Главная</title>
+</head>
+<body>
+
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.tableNumber }}<br>
+        {{ form.reservationTime }}<br>
+        {{ form.email }}<br>
+        <button type="submit" class="btn btn-success">Забронировать</button>
+        
+    </form>
+{% endblock %}
+
+<div class="table">
+    <div class="container">
+        <div class="table__inner">
+            <a class="pointl" href="{% url 'homePage' %}">Главная</a>
+        </div>
+    </div>
+</div>

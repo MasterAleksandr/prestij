@@ -1,0 +1,32 @@
+{% load static %}
+
+<html lang="ru"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Главная</title>
+</head>
+<body>
+
+
+<header class="obj">
+    <div class="container">
+        <div class="obji">
+            <nav class="point">
+                <a class="pointl" href="{% url 'menuPage' %}">Меню</a>
+				<a class="pointl" href="{% url 'aboutPage' %}">О нас</a>
+                <a class="pointl" href="{% url 'tablePage' %}">Бронирование</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">Ресторан Престиж</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
